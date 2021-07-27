@@ -72,7 +72,7 @@ const useNote = (initData?: NoteModel) => {
       }
 
       const diff: Partial<NoteModel> = {}
-      map(payload, (value: any, key: keyof NoteModel) => {
+      map(payload, (value: never, key: keyof NoteModel) => {
         if (note[key] !== value) {
           diff[key] = value
         }
